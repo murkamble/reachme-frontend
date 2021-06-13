@@ -1,6 +1,6 @@
 {
-  "short_name": "ReachMe",
-  "name": "ReachMe Lite",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "logo.ico",
