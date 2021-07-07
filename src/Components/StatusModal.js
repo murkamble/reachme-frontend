@@ -138,20 +138,20 @@ const StatusModal = () => {
                                     {
                                         img.camera ? imageShow(img.camera, theme)
                                         : img.url
-                                            ?<>
+                                            ?<div>
                                                 {
                                                     img.url.match(/video/i)
                                                     ? videoShow(img.url, theme) 
                                                     : imageShow(img.url, theme)
                                                 }
-                                            </>
-                                            :<>
+                                            </div>
+                                            :<div>
                                                 {
                                                     img.type.match(/video/i)
                                                     ? videoShow(URL.createObjectURL(img), theme) 
                                                     : imageShow(URL.createObjectURL(img), theme)
                                                 }
-                                            </>
+                                            </div>
                                     }
                                     <span onClick={() => deleteImages(index)}>&times;</span>
                                 </div>
@@ -174,7 +174,7 @@ const StatusModal = () => {
                         {
                             stream 
                             ? <i className="fas fa-camera" onClick={handleCapture} />
-                            : <>
+                            : <div>
                                 <i className="fas fa-camera" onClick={handleStream} />
 
                                 <div className="file_upload">
@@ -182,7 +182,7 @@ const StatusModal = () => {
                                     <input type="file" name="file" id="file"
                                     multiple accept="image/*,video/*" onChange={handleChangeImages} />
                                 </div>
-                            </>
+                            </div>
                         }
                         
                     </div>

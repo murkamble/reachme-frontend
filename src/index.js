@@ -1,10 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './Styles/global.css'
-import App from './App'
+import App from './App';
 import DataProvider from './Redux/store'
 
-ReactDOM.render(  
+ReactDOM.render(
   <React.StrictMode>
     <DataProvider>
       <App />

@@ -1,19 +1,25 @@
 {
   "short_name": "ReachMe",
-  "name": "ReachMe Lite",
+  "name": "ReachMe",
   "icons": [
     {
-      "src": "logo.ico",
+      "src": "ReachMe/ReachMe2.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "ReachMe/ReachMe2_192px.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "ReachMe/maskable_icon.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "ReachMe/ReachMe2_512px.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -123,7 +123,7 @@ const CommentCard = ({children, comment, post, commentId}) => {
 
                         {
                             onEdit
-                            ? <>
+                            ? <div>
                                 <small className="font-weight-bold mr-3"
                                 onClick={handleUpdate}>
                                     update
@@ -132,7 +132,7 @@ const CommentCard = ({children, comment, post, commentId}) => {
                                 onClick={() => setOnEdit(false)}>
                                     cancel
                                 </small>
-                            </>
+                            </div>
 
                             : <small className="font-weight-bold mr-3"
                             onClick={handleReply}>
