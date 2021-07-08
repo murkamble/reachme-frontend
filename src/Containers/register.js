@@ -9,17 +9,17 @@ const Register = () => {
     const history = useHistory()
 
     const initialState = { 
-        fullname: '', username: '', email: '', password: '', cf_password: '', gender: 'male'
+        fullname: '', username: '', dob: '', email: '', password: '', cf_password: '', gender: 'male'
     }
     const [userData, setUserData] = useState(initialState)
-    const { fullname, username, email, password, cf_password } = userData
+    const { fullname, username, dob, email, password, cf_password } = userData
 
     const [typePass, setTypePass] = useState(false)
     const [typeCfPass, setTypeCfPass] = useState(false)
 
-    useEffect(() => {
-        if(auth.token) history.push("/")
-    }, [auth.token, history])
+    // useEffect(() => {
+    //     if(auth.token) history.push("/")
+    // }, [auth.token, history])
 
     
     const handleChangeInput = e => {
@@ -35,7 +35,10 @@ const Register = () => {
     return (
         <div className="auth_page">
             <form onSubmit={handleSubmit}>
-                <h3 className="text-uppercase text-center mb-4">V-Network</h3>
+                
+                <div style={{ textAlign: "center" }} >
+                    <img style={{ width: '64px', height: '64px', margin: '10px' }} src="https://res.cloudinary.com/mayurkamble/image/upload/v1625477279/icon/ReachMe2_pnioxk.png" />
+                </div>
 
                 <div className="form-group">
                     <label htmlFor="fullname">Full Name</label>
@@ -56,6 +59,18 @@ const Register = () => {
                     
                     <small className="form-text text-danger">
                         {alert.username ? alert.username : ''}
+                    </small>
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="dob">Date Of Birth</label>
+                    <input type="text" className="form-control" id="dob" name="dob"
+                    onChange={handleChangeInput} value={dob}
+                    placeholder='dd-MM-yyyy'
+                    style={{background: `${alert.dob ? '#fd2d6a14' : ''}`}} />
+                    
+                    <small className="form-text text-danger">
+                        {alert.dob ? alert.dob : ''}
                     </small>
                 </div>
 
@@ -127,7 +142,7 @@ const Register = () => {
                     </label>
                 </div>
                 
-                <button type="submit" className="btn btn-dark w-100">
+                <button type="submit" className="btn btn-primary w-100">
                     Register
                 </button>
 

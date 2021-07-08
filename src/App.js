@@ -8,6 +8,12 @@ import Home from './Containers/home'
 import Login from './Containers/login'
 import Register from './Containers/register'
 
+import ForgotPass from './Containers/ForgotPassword'
+import ResetPass from './Containers/ResetPassword'
+import NotFound from './Components/NotFound'
+
+import ActivationEmail from './Containers/ActivationEmail'
+
 import Alert from './Components/alert/Alert'
 import Header from './Components/header/Header'
 import StatusModal from './Components/StatusModal'
@@ -84,6 +90,11 @@ const App = () => {
           <Route exact path="/" component={auth.token ? Home : Login} />
           <Route exact path="/register" component={Register} />
 
+          <Route path="/forgot_password" component={ForgotPass} exact />
+          <Route path="/user/reset/:access_token" component={ResetPass} exact />
+
+          <Route path="/user/activation/:activation_token" component={ActivationEmail} exact />
+          
           <PrivateRouter exact path="/:page" component={PageRender} />
           <PrivateRouter exact path="/:page/:id" component={PageRender} />
           

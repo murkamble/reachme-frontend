@@ -62,7 +62,7 @@ const Login = () => {
                     </div>
 
                     <small id="emailHelp" className="form-text text-muted">
-                        <Link to="/register" >Forgot Password</Link>
+                        <Link to="/forgot_password" >Forgot Password</Link>
                     </small>
                    
                 </div>
