@@ -72,6 +72,10 @@ const Menu = () => {
                         {theme ? 'Light mode' : 'Dark mode'}
                     </label>
 
+                    <Link className="dropdown-item" to={`/installation`}>Installation</Link>
+
+                    <Link className="dropdown-item" to={`/aboutUs`}>About Us</Link>
+
                     <div className="dropdown-divider"></div>
                     <Link className="dropdown-item" to="/"
                     onClick={() => dispatch(logout())}>
