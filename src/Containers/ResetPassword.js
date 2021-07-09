@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 import {showErrMsg, showSuccessMsg} from '../Utils/notification/Notification'
 import {isLength, isMatch} from '../Utils/validation/Validation'
 
@@ -15,7 +15,7 @@ const initialState = {
 function ResetPassword() {
     const [data, setData] = useState(initialState)
     const {access_token} = useParams()
-    console.log(access_token)
+    // console.log(access_token)
 
     const {password, cf_password, err, success} = data
 
@@ -33,11 +33,11 @@ function ResetPassword() {
             return setData({...data, err: "Password did not match.", success: ''})
         
         try {
-            // const res = await axios.post('/api/reset', {password}, {
-            //     headers: {Authorization: access_token}
-            // })
+            const res = await axios.post('/api/reset', {password}, {
+                headers: {Authorization: access_token}
+            })
 
-            // return setData({...data, err: "", success: res.data.msg})
+            return setData({...data, err: "", success: res.data.msg})
 
         } catch (err) {
             err.response.data.msg && setData({...data, err: err.response.data.msg, success: ''})
@@ -50,10 +50,15 @@ function ResetPassword() {
         <div className="fg_pass">
             <h2>Reset Your Password</h2>
 
-            <div className="row">
-                {err && showErrMsg(err)}
-                {success && showSuccessMsg(success)}
+            {err && showErrMsg(err)}
+            {success && showSuccessMsg(success)}
 
+<div style={{ display: 'flex', justifyContent: 'center'}}>
+            { success && showSuccessMsg(success) ? <><Link to="/login" >Login Now</Link> </> : <></> }
+</div>
+
+            <div className="row">
+                
                 <label htmlFor="password">Password</label>
                 <input type="password" name="password" id="password" value={password}
                 onChange={handleChangeInput} />

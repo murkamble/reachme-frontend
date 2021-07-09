@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 import PageRender from './CustomRouter/PageRender'
 import PrivateRouter from './CustomRouter/PrivateRouter'
@@ -10,7 +10,7 @@ import Register from './Containers/register'
 
 import ForgotPass from './Containers/ForgotPassword'
 import ResetPass from './Containers/ResetPassword'
-import NotFound from './Components/NotFound'
+// import NotFound from './Components/NotFound'
 
 import ActivationEmail from './Containers/ActivationEmail'
 
@@ -86,6 +86,8 @@ const App = () => {
           {status && <StatusModal />}
           {auth.token && <SocketClient />}
           {call && <CallModal />}
+
+          <Switch>
           
           <Route exact path="/" component={auth.token ? Home : Login} />
           <Route exact path="/register" component={Register} />
@@ -98,6 +100,7 @@ const App = () => {
           <PrivateRouter exact path="/:page" component={PageRender} />
           <PrivateRouter exact path="/:page/:id" component={PageRender} />
           
+          </Switch>
         </div>
       </div>
     </Router>
