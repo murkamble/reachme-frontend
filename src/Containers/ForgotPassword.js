@@ -3,6 +3,7 @@ import axios from 'axios'
 import { isEmail } from '../Utils/validation/Validation'
 // import {showErrMsg, showSuccessMsg} from '../../utils/notification/Notification'
 import { showErrMsg, showSuccessMsg } from '../Utils/notification/Notification'
+// import {BASE_URL} from '../Utils/config';
 
 const initialState = {
     email: '',
@@ -25,7 +26,7 @@ function ForgotPassword() {
             return setData({...data, err: 'Invalid emails.', success: ''})
             
         try {
-            const res = await axios.post('/api/forgot', {email})
+            const res = await axios.post(`/api/forgot`, {email})
 
             return setData({...data, err: '', success: res.data.msg})
         } catch (err) {

@@ -92,10 +92,10 @@ const App = () => {
           <Route exact path="/" component={auth.token ? Home : Login} />
           <Route exact path="/register" component={Register} />
 
-          <Route path="/forgot_password" component={ForgotPass} exact />
-          <Route path="/user/reset/:access_token" component={ResetPass} exact />
+          <Route exact path="/forgot_password" component={ForgotPass} />
+          <Route exact path="/user/reset/:access_token" component={ResetPass} />
 
-          <Route path="/user/activation/:activation_token" component={ActivationEmail} exact />
+          <Route exact path="/user/activation/:activation_token" component={ActivationEmail} />
           
           <PrivateRouter exact path="/:page" component={PageRender} />
           <PrivateRouter exact path="/:page/:id" component={PageRender} />

@@ -3,7 +3,7 @@ import axios from 'axios'
 import {useParams, Link} from 'react-router-dom'
 import {showErrMsg, showSuccessMsg} from '../Utils/notification/Notification'
 import {isLength, isMatch} from '../Utils/validation/Validation'
-
+// import {BASE_URL} from "../Utils/config";
 
 const initialState = {
     password: '',
@@ -33,7 +33,7 @@ function ResetPassword() {
             return setData({...data, err: "Password did not match.", success: ''})
         
         try {
-            const res = await axios.post('/api/reset', {password}, {
+            const res = await axios.post(`/api/reset`, {password}, {
                 headers: {Authorization: access_token}
             })
 

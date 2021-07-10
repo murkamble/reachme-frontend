@@ -25,11 +25,6 @@ import { useSelector } from 'react-redux'
                             <div style={{ width: 'calc(100% - 800px)', padding: '10px' }}><img style={{ width: '200px', filter: theme ? 'invert(1)' : 'invert(0)'}} src="https://res.cloudinary.com/mayurkamble/image/upload/v1625834614/WhatsApp_Image_2021-07-09_at_18.12.00_p2no3e.jpg" /></div>
                             <li>3) Finally, Click on Install.</li>
                             <div style={{ width: 'calc(100% - 800px)', padding: '10px' }}><img style={{ width: '200px', filter: theme ? 'invert(1)' : 'invert(0)'}} src="https://res.cloudinary.com/mayurkamble/image/upload/v1625834623/WhatsApp_Image_2021-07-09_at_18.12.00_1_lsbggu.jpg" /></div>
-                            <div style={{ width: '100%', padding: '10px' }}><img style={{ width: '100%', filter: theme ? 'invert(1)' : 'invert(0)'}} src="https://res.cloudinary.com/mayurkamble/image/upload/v1625834596/how-to-home-button-google-chrome-1_m7rf4s.jpg" /></div>
-                            <li>2) Then click Install App.</li>
-                            <div style={{ width: '100%', padding: '10px' }}><img style={{ width: '100%', filter: theme ? 'invert(1)' : 'invert(0)'}} src="https://res.cloudinary.com/mayurkamble/image/upload/v1625834614/WhatsApp_Image_2021-07-09_at_18.12.00_p2no3e.jpg" /></div>
-                            <li>3) Finally, Click on Install.</li>
-                            <div style={{ width: '100%', padding: '10px' }}><img style={{ width: '100%', filter: theme ? 'invert(1)' : 'invert(0)'}} src="https://res.cloudinary.com/mayurkamble/image/upload/v1625834623/WhatsApp_Image_2021-07-09_at_18.12.00_1_lsbggu.jpg" /></div>
                         </ol>
                     </div>
                 </div>
