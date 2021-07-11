@@ -37,13 +37,13 @@ const Profile = () => {
             {
                 profile.loading 
                 ? <img className="d-block mx-auto" src={LoadIcon} alt="loading" />
-                : <>
+                : <div>
                     {
                         saveTab
                         ? <Saved auth={auth} dispatch={dispatch} />
                         : <Posts auth={auth} profile={profile} dispatch={dispatch} id={id} />
                     }
-                </>
+                </div>
             }
             
         </div>

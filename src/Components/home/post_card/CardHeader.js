@@ -53,14 +53,14 @@ const CardHeader = ({post}) => {
                 <div className="dropdown-menu">
                     {
                         auth.user._id === post.user._id &&
-                        <>
+                        <div>
                             <div className="dropdown-item" onClick={handleEditPost}>
                                 <span className="material-icons">create</span> Edit Post
                             </div>
                             <div className="dropdown-item" onClick={handleDeletePost} >
                                 <span className="material-icons">delete_outline</span> Remove Post
                             </div>
-                        </>
+                        </div>
                     }
 
                     <div className="dropdown-item" onClick={handleCopyLink}>

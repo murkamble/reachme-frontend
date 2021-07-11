@@ -54,7 +54,7 @@ function ResetPassword() {
             {success && showSuccessMsg(success)}
 
 <div style={{ display: 'flex', justifyContent: 'center'}}>
-            { success && showSuccessMsg(success) ? <><Link to="/login" >Login Now</Link> </> : <></> }
+            { success && showSuccessMsg(success) ? <div><Link to="/login" >Login Now</Link> </div> : <div></div> }
 </div>
 
             <div className="row">

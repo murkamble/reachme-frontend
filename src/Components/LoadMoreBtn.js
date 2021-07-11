@@ -2,7 +2,7 @@ import React from 'react'
 
 const LoadMoreBtn = ({result, page, load, handleLoadMore}) => {
     return (
-        <>
+        <div>
             {
                 result < 9 * (page - 1) ? '' : 
 
@@ -12,7 +12,7 @@ const LoadMoreBtn = ({result, page, load, handleLoadMore}) => {
                 </button>
             }
             
-        </>
+        </div>
     )
 }
 

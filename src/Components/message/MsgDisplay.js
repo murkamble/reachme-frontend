@@ -18,7 +18,7 @@ const MsgDisplay = ({user, msg, theme, data}) => {
     }
 
     return (
-        <>
+        <div>
             <div className="chat_title">
                 <Avatar src={user.avatar} size="small-avatar" />
                 <span>{user.username}</span>
@@ -88,7 +88,7 @@ const MsgDisplay = ({user, msg, theme, data}) => {
             <div className="chat_time">
                 {new Date(msg.createdAt).toLocaleString()}
             </div>
-        </>
+        </div>
     )
 }
 

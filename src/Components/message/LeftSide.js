@@ -81,7 +81,7 @@ const LeftSide = () => {
     },[online, message.firstLoad, dispatch])
 
     return (
-        <>
+        <div>
             <form className="message_header" onSubmit={handleSearch} >
                 <input type="text" value={search}
                 placeholder="Enter to Search..."
@@ -93,7 +93,7 @@ const LeftSide = () => {
             <div className="message_chat_list">
                 {
                     searchUsers.length !== 0
-                    ?  <>
+                    ?  <div>
                         {
                             searchUsers.map(user => (
                                 <div key={user._id} className={`message_user ${isActive(user)}`}
@@ -103,8 +103,8 @@ const LeftSide = () => {
                             ))
                         }
                         
-                    </>
-                    : <>
+                    </div>
+                    : <div>
                         {
                             message.users.map(user => (
                                 <div key={user._id} className={`message_user ${isActive(user)}`}
@@ -123,12 +123,12 @@ const LeftSide = () => {
                                 </div>
                             ))
                         }
-                    </>
+                    </div>
                 }
                
                <button ref={pageEnd} style={{opacity: 0}} >Load More</button>
             </div>
-        </>
+        </div>
     )
 }
 

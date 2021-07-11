@@ -36,7 +36,7 @@ const FollowBtn = ({user}) => {
     }
 
     return (
-        <>
+        <div>
         {
             followed
             ? <button className="btn btn-outline-danger"
@@ -48,7 +48,7 @@ const FollowBtn = ({user}) => {
                 Follow
             </button>
         }
-        </>
+        </div>
     )
 }
 

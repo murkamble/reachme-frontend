@@ -230,7 +230,7 @@ const CallModal = () => {
                     
                     {
                         (call.recipient === auth.user._id && !answer) &&
-                        <>
+                        <div>
                             {
                                 call.video
                                 ? <button className="material-icons text-success"
@@ -242,7 +242,7 @@ const CallModal = () => {
                                     call
                                 </button>
                             }
-                        </>
+                        </div>
                     }
                     
                 </div>
